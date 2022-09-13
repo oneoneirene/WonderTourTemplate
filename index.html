@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://kit.fontawesome.com/2e1f6f0508.js" crossorigin="anonymous"></script>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Stick+No+Bills&display=swap" rel="stylesheet">
+  <title>Document</title>
+  <style>
+    html{
+      width: 100%;
+      height: 100%;
+    }
+    body{
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .bar {
+      height: 70px;
+      background: white;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .bar h2:hover {
+      cursor: pointer;
+    }
+
+    .tours button:hover {
+      cursor: pointer;
+    }
+
+    .dot:hover {
+      cursor: pointer;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 60px;
+      background-color: #162E44;
+      color: white;
+      font-size: 22px;
+      width: 100%;
+      position: sticky;
+      top: 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-right: 20px;
+      height: 100%;
+    }
+
+    nav ul li:hover {
+      background: rgba(255, 255, 255, 0.3); 
+      cursor: pointer;
+    }
+    
+    .container {
+      width: 100%;
+      height: 750px;
+      background: black;
+    }
+
+    .bar button {
+      width: 200px;
+      height: 50px;
+      margin-left: 100px;
+      border: 3px lightseagreen solid;
+      background-color: white;
+      font-size: 16px;
+    }
+
+    .bar button:hover {
+      cursor: pointer;
+      background-color: #50ba87;
+      transition-duration: 1s;
+      color: white;
+      border: 1px solid #50ba87;
+    }
+
+
+
+    #st1 {
+        position: absolute;
+        color: white;
+        font-size: 20px;
+        left: 500px;
+        bottom: 390px;
+        animation: fadeInRight;
+        animation-duration: 2s;
+      }
+
+    #st1-2 {
+        position: absolute;
+        color: white;
+        font-size: 60px;
+        left: 500px;
+        bottom: 310px;
+        font-weight: bolder;
+        animation: fadeInUp;
+        animation-duration: 2s;
+      }
+
+    .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .swiper-slide button{
+        width: 180px;
+        height: 70px;
+        position: absolute;
+        left: 500px;
+        bottom: 220px;
+        background: none;
+        color: white;
+        border:5px solid white;
+        font-size: 20px;
+        animation: fadeInUp;
+        animation-duration: 2s;
+      }
+
+      .swiper-slide button:hover {
+        cursor: pointer;
+        background-color: #50ba87;
+        transition-duration: 1s;
+      }
+
+      .threepc {
+        width: 100%;
+        height: 600px;
+        background: #fafafa;
+        position: absolute;
+        top:750px;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+      }
+      .pc {
+        width: 350px;
+        margin: 20px;
+        height: 400px; 
+        z-index: 1;
+        overflow: hidden;
+        text-align: center;
+      }
+      .pc img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 2;
+      }
+
+      .imgt:hover{
+        cursor: pointer;
+        transform: scale(1.2);
+        transition: 1s;
+      }
+
+      .pc span {
+        position: absolute;
+        width: 350px;
+        height: 100px;
+        top: 400px;
+        z-index: 3;
+        font-size: 30px;
+        font-weight: bolder;
+        color: white;
+      }
+
+      .sbar {
+        position: absolute;
+        width: 150px;
+        z-index: 6;
+        font-size: 20px;
+        text-align: center;
+        top: 530px;
+      }
+      
+      .sbar:hover {
+        animation: zoomIn;
+        animation-duration: 1s;
+        cursor: pointer;
+      }
+
+
+      .container-2 {
+        width: 100%;
+        height: 550px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        position: relative;
+        top: 410px;
+      }
+      .block {
+        margin-top: 100px;
+        width: 600px;
+        height: 430px;
+        background-color: #fafafa;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .block span:nth-child(1) {
+        font-size: 35px;
+        font-weight: bolder;
+      }
+
+      .block span:nth-child(1):hover {
+        cursor: pointer;
+      }
+    
+      .block ul li {
+        display: inline;
+        margin: 20px;
+        font-size: 20px;
+        text-decoration: underline;
+      }
+      .block span:nth-child(3) {
+        text-align: left;
+        font-size: 18px;
+        width: 475px;
+      }
+
+      .block ul li:hover {
+        color: #01b3a7;
+        cursor: pointer;
+      }
+
+      .bb {
+        margin-top: 20px;
+      }
+
+      .bb button{
+        width: 200px;
+        height: 80px;
+        font-size: 20px;
+        color: white;
+        background: #01b3a7;
+        border: none;
+        margin-top: 5px;
+        margin-left: -57px;
+      }
+
+      .bb button:nth-child(1):hover {
+        border: 2px solid black;
+        color: black;
+        background: white;
+        transition: 0.5s;
+        cursor: pointer;
+      }
+
+      .bb button:nth-child(2){
+        margin-left:15px ;
+        background: white;
+        border: 2px solid black;
+        color: black;
+      }
+
+      .bb button:nth-child(2):hover{
+        background: #01b3a7;
+        border: 2px solid #01b3a7;
+        color: black;
+        cursor: pointer;
+        transition: 0.5s;
+      }
+
+      .service{
+        width: 400px;
+        height: 200px;
+        flex-wrap: wrap;
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        border: 8px solid ghostwhite;
+      }
+
+      .container-3 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        position: relative;
+        top: 410px;
+      }
+
+      .container-4 {
+        width: 100%;
+        background-color: pink;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        position: relative;
+        top: 410px;
+        margin: 50px 0 60px 0;
+      }
+
+
+      .container-3 img {
+        width: 100%;
+        margin: 0;
+        height: 800px;
+        object-fit: cover;
+      }
+
+      
+      .container-4 img {
+        width: 100%;
+        margin: 0;
+        height: 600px;
+        object-fit: cover;
+      }
+      
+      .service i {
+        font-size: 35px;
+        color: #01b3a7;
+      }
+
+      .title {
+        font-size: 25px;
+        margin-top: 40px;
+      }
+
+      .title:hover{
+        color: #01b3a7;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+
+      .content {
+        width: 280px;
+        font-size: 18px;
+        margin-bottom: 30px;
+        margin-left: 20px;
+      }
+
+      .tours {
+      width: 640px;
+      height: 360px;
+      margin-bottom: 50px;
+      border: 2px gainsboro solid;
+      border-left: none;
+      }
+
+      .tourspc {
+        width: 640px;
+        height: 360px;
+        border: 2px gainsboro solid;
+        border-right: none;
+        overflow: hidden;
+      }
+
+      .tourspc img {
+        width: 640px;
+        height: 360px;
+      }
+
+      .tourspc2 {
+        width: 640px;
+        height: 360px;
+        background-image: url('https://ld-wt73.template-help.com/wt_prod-20476/images/product-big-2-600x366.jpg');
+        background-size: cover;
+        border: 2px gainsboro solid;
+        border-right: none;
+        overflow: hidden;
+      }
+
+      .tourspc:hover{
+        cursor: pointer;
+      }
+
+      .trr {
+        width: 540px;
+        margin-left: 50px;
+        margin-top: 50px;
+      }
+
+      .trr i {
+        color: #ffcc00;
+      }
+
+      .trr button {
+        width: 180px;
+        height: 60px;
+        font-size: 18px;
+      }
+
+      .mission {
+        width: 290px;
+        height: 300px;
+        margin: 0 20px 90px 10px;
+      }
+
+      .square {
+        position: relative;
+        width: 250px;
+        height: 200px;
+        background: #f7f7f7;
+        left: 20px;
+        top: 100px;
+        text-align: center;
+        font-size: 20px;
+      }
+
+      .circle {
+        position: relative;
+        background: url('https://ld-wt73.template-help.com/wt_prod-20476/images/user-1-118x118.jpg');
+        background-size: cover;
+        width: 100px;
+        height: 100px;
+        border:5px solid white ;
+        border-radius: 50%;
+        bottom: 180px;
+        left: 90px;
+      }
+
+      .say {
+        width: 400px;
+        height: 250px;
+        margin: 50px 10px 10px 10px;
+        background: white;
+        text-align: center;
+      }
+
+      .sscir:hover{
+        cursor: pointer;
+      }
+      .sscir-2:hover{
+        cursor: pointer;
+      }
+      .sscir-3:hover{
+        cursor: pointer;
+      }
+
+      .sscir {
+        position: absolute;
+        background: url('https://ld-wt73.template-help.com/wt_prod-20476/images/user-1-118x118.jpg');
+        background-size: cover;
+        width: 120px;
+        height: 120px;
+        border:5px solid white ;
+        border-radius: 50%;
+        top: -10px;
+        left: 300px;
+      }
+      .sscir-2 {
+        position: absolute;
+        background: url('https://ld-wt73.template-help.com/wt_prod-20476/images/user-1-118x118.jpg');
+        background-size: cover;
+        width: 120px;
+        height: 120px;
+        border:5px solid white ;
+        border-radius: 50%;
+        top: -10px;
+        left: 720px;
+      }
+      .sscir-3 {
+        position: absolute;
+        background: url('https://ld-wt73.template-help.com/wt_prod-20476/images/user-1-118x118.jpg');
+        background-size: cover;
+        width: 120px;
+        height: 120px;
+        border:5px solid white ;
+        border-radius: 50%;
+        top: -10px;
+        left: 1150px;
+      }
+
+
+      .ss {
+        position: absolute;
+      }
+
+      .say-2 {
+        width: 400px;
+        height: 300px;
+        margin: 50px 10px 10px 10px;
+        background: url('https://ld-wt73.template-help.com/wt_prod-20476/images/thumnails-info-1-370x303.jpg');
+        background-size: cover;
+        text-align: center;
+      }
+
+      .years {
+        width: 350px;
+        height: 270px;
+        background: white;
+        margin-top: 15px;
+        margin-left: 25px;
+        text-align: center;
+      }
+
+    .swipertwo {
+      width: 1300px;
+      height: 500px;
+    }
+
+    .swipertwo .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+    .swipertwo .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .swiperthree {
+        width: 100%;
+        height: 200px;
+        margin: 0 100px;
+      }
+
+      .swiperthree .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiperthree .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .downbar {
+        width: 100%;
+        height: 330px;
+        background: #162e44;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        color: white;
+      }
+      .intro {
+        margin: 50px;
+        line-height: 50px;
+      }
+
+      .discount button {
+        background: none;
+        background: #01b3a7
+      }
+
+      .swiper-slide:hover {
+        cursor: pointer;
+      }
+
+      .intro button {
+        cursor: pointer;
+      }
+
+      .intro button:hover {
+        background:#50ba87
+      }
+
+      .discount button:hover {
+        cursor: pointer;
+        background: black;
+      }
+
+      .intro i {
+        font-size: 20px;
+        color:#01b3a7
+      }
+
+      .intro button{
+        width: 150px;
+        height: 50px;
+        font-size: 15px;
+        margin-top: 10px;
+        color: white;
+        background: #01b3a7;
+        border: 1px solid black;
+      }
+
+      .footer {
+        width: 100%;
+        height: 80px;
+        background: #11263a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .footertext {
+        color: #596875;
+        margin: 0 160px;
+      }
+
+      .call:hover {
+        color:#01b3a7;
+        cursor: pointer;
+      }
+
+      .te button{
+        border: none;
+      }
+
+      .te button:hover {
+        cursor: pointer;
+      }
+      
+    
+    @media (min-width: 1200px) { 
+      #dot {
+        height:20px; margin-left: 20px;
+      }
+      #clock{
+        height: 25px;
+      }
+      #phone {
+        height:25px;margin-left:50px;margin-right: 10px;
+      }
+    }
+
+
+    @media (min-width: 768px) and  (max-width: 1200px)  {
+      #dot, #clock, #phone {
+        display: none;
+      }
+
+    }
+
+    @media (max-width: 767px) {
+      #dot, #clock, #phone {
+        display: none;
+      }
+
+    }
+  
+
+        
+
+
+  
+    
+
+    
+  </style>
+</head>
+<body>
+  <!-- 最上方 -->
+  <div class="bar">
+    <img id="dot" src="./img/4dots.png">
+    <h2 style="margin: 5px; color: #162E44;">Wonder Tour</h2>
+    <span style="width: 300px;"></span>
+    <img id="clock" src="./img/clock.png">
+    <span style="margin-left:10px;">09:00AM — 05:00PM</span>
+    <img id="phone" src="./img/phone.png">
+    <span class="call">+1 323-913-4688</span>
+    <button>Get A Free Quote</button>
+  </div>
+  <!-- 導覽列 -->
+  <nav>
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>Our Tours</li>
+      <li>Gallery</li>
+      <li>Blog</li>
+      <li>Contact Us</li>
+      <li>Pages</li>
+      <li style="width:300px"></li>
+      <li><i class="fa-brands fa-facebook-f"></i></li>
+      <li><i class="fa-brands fa-twitter"></i></li>
+      <li><i class="fa-brands fa-google-plus-g"></i></li>
+      <li><i class="fa-brands fa-instagram"></i></li>
+    </ul>
+  </nav>
+
+  <!-- 輪播圖一 -->
+  <div class="container">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1473&q=80">
+          <span id="st1">ENJOY  THE  BEST  DESTINATION  WITH  OUR  TRAVEL  AGENCY</span>
+          <span id="st1-2">Explore The World</span>
+          <button>Get in Touch</button>
+        </div>
+        <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1633&q=80">
+          <span id="st1">A TEAM OF PROFESSIONAL TRAVEL EXPERT</span>
+          <span id="st1-2">Trust Our Experience</span>
+          <button>Get in Touch</button>
+        </div>
+        <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1585130401366-fe05a8d813c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1556&q=80">
+          <span id="st1">BUILD YOUR NEXT HOLIDAY TRIP WITH US</span>
+          <span id="st1-2">Create Your Tour</span>
+          <button>Get in Touch</button>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- 三圖選項 -->
+    <div class="threepc">
+      <div class="pc">
+        <span>Balloon Flights</span>
+        <img class="imgt" src="https://images.unsplash.com/photo-1507608443039-bfde4fbcd142?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="">
+      </div>
+      <div class="pc">
+        <span>Mountain Holidays</span>
+        <img class="imgt" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="">
+      </div>
+      <div class="pc">
+        <span>Beach Holidays</span>
+        <img class="imgt" src="https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="">
+      </div>
+      <div class="sbar">      
+        <span>Other Tours</span>&nbsp;&nbsp;<i class="fa-solid fa-arrow-right-long"></i>
+      </div>
+    </div>
+
+    <!-- 關於我們 -->
+    <div class="container-2">
+      <div class="block">
+        <img style="width: 600px;height: 430px;"src="https://ld-wt73.template-help.com/wt_prod-20476/images/index-3-556x382.jpg">
+      </div>
+      <div class="block">
+        <span>Discover New Horizons</span>
+        <ul>
+          <li>About Us</li>
+          <li>Why Choose Us</li>
+          <li>Discover New Horizons</li>
+        </ul>
+        <span>
+          Wonder Tour is committed to bringing our clients the best in value and quality travel arrangements. We are passionate about travel and sharing the world's wonders with you.
+        </span>
+        <div class="bb">
+          <button>Get In Touch</button>
+          <button>Read More</button>
+        </div>
+      </div>  
+    </div>
+
+    <!-- 服務優點 -->
+    <div class="container-3">
+      <h1>Our Services</h1>
+    </div>
+    <div class="container-3">
+      <div class="service">
+        <div class="title"> 
+          <i class="fa-solid fa-sliders"></i> &nbsp; Personal Matching
+        </div>
+        <div class="content">
+          Our unique matching system lets you find just the tour you want for your next holiday.
+        </div>
+        <div class="title"></div>
+      </div>
+      <div class="service">
+        <div class="title"> 
+          <i class="fa-solid fa-award"></i> &nbsp;Wide Variety of Tours
+        </div>
+        <div class="content">
+          We offer a wide variety of personally picked tours with destinations all over the globe.
+        </div>
+        <div class="title"></div>
+      </div>
+      <div class="service">
+        <div class="title"> 
+          <i class="fa-regular fa-star"></i> &nbsp; Highly Qualified Service
+        </div>
+        <div class="content">
+          Our unique matching system lets you find just the tour you want for your next holiday.
+        </div>
+        <div class="title"></div>
+      </div>
+    </div>
+    <div class="container-3">
+      <div class="service">
+        <div class="title"> 
+          <i class="fa-solid fa-headphones-simple"></i> &nbsp; 24/7 Support
+        </div>
+        <div class="content">
+          You can always get professional support from our staff 24/7 and ask any question you have.
+        </div>
+        <div class="title"></div>
+      </div>
+      <div class="service">
+        <div class="title"> 
+          <i class="fa-solid fa-fire"></i> &nbsp; Handpicked Hotels
+        </div>
+        <div class="content">
+          Our team offers only the best selection of affordable and luxury hotels to our clients.
+        </div>
+        <div class="title"></div>
+      </div>
+      <div class="service">
+        <div class="title"> 
+          <i class="fa-solid fa-wallet"></i> &nbsp; Best Price Guarantee
+        </div>
+        <div class="content">
+          If you find tours that are cheaper than ours, we will compensate the difference.
+        </div>
+        <div class="title"></div>
+      </div>
+    </div>
+
+    <!-- 旅程一 -->
+    <div class="container-3">
+      <h1>Hot Tours</h1>
+    </div>
+    <div class="container-3">
+      <div class="tourspc">
+        <img src="https://ld-wt73.template-help.com/wt_prod-20476/images/product-big-1-600x366.jpg" alt="">
+      </div>
+      <div class="tours">
+        <div class="trr">
+        <h2>Spain, Benidorm</h2>
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+        <span>4 customer reviews</span>
+        <br>
+        <br>
+        <span>Benidorm is a buzzing resort with a big reputation for beach holidays. Situated in sunny Costa Blanca, the town is one of the original Spanish beach resorts...</span>
+        <br>
+        <br>
+        <button>Buy This Tour</button>
+      </div>
+      </div>
+    </div>
+
+    <!-- 旅程二 -->
+    <div class="container-3">
+      <div class="tourspc">
+        <img src="https://ld-wt73.template-help.com/wt_prod-20476/images/product-big-2-600x366.jpg" alt="">
+      </div>
+      <div class="tours">
+        <div class="trr">
+        <h2>Spain, Benidorm</h2>
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+        <span>5 customer reviews</span>
+        <br>
+        <br>
+        <span>The beautiful and inviting island nation of Mauritius is an ideal ‘flop and drop’ at the conclusion of your safari. Indulge in the delightful scents of the fragrant...</span>
+        <br>
+        <br>
+        <button>Buy This Tour</button>
+      </div>
+      </div>
+    </div>
+
+    <!-- 聯絡人 -->
+    <div class="container-3">
+      <h1>Different People — One Mission</h1>
+    </div>
+    
+    <div class="container-3">
+      <div class="mission">
+        <div class="square">
+          <br>
+          <br>
+          <b>Diana Robinson</b>
+          <br>
+          Founder, Owner
+          <br>
+          +1 323-913-4688
+        </div>
+        <div class="circle">
+          <div class="ccp"></div>
+        </div>
+      </div>
+      <div class="mission">
+        <div class="square">
+          <br>
+          <br>
+          <b>Diana Robinson</b>
+          <br>
+          Founder, Owner
+          <br>
+          +1 323-913-4688
+        </div>
+        <div class="circle">
+          <div class="ccp"></div>
+        </div>
+      </div>
+      <div class="mission">
+        <div class="square">
+          <br>
+          <br>
+          <b>Diana Robinson</b>
+          <br>
+          Founder, Owner
+          <br>
+          +1 323-913-4688
+        </div>
+        <div class="circle">
+          <div class="ccp"></div>
+        </div>
+      </div>
+      <div class="mission">
+        <div class="square">
+          <br>
+          <br>
+          <b>Diana Robinson</b>
+          <br>
+          Founder, Owner
+          <br>
+          +1 323-913-4688
+        </div>
+        <div class="circle">
+          <div class="ccp"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 開啟旅程 -->
+    <div class="container-3" style="text-align:center;width: 100%;height: 600px;background-size: cover;background-attachment: fixed;background-image: url('https://images.unsplash.com/photo-1490365728022-deae76380607?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80');">
+      <div class="te" style="margin-top: 150px;width:600px;color: white;">
+        <b style="font-size:50px ;">First-class Impressions</b>
+        <br>
+        <span style="font-size:50px;">are Waiting for You!</span>
+        <br>
+        <br>
+        <span style="font-size: 18px;">Our agency offers travelers various tours and excursions with destinations all over the world. Browse our website to find your dream tour!</span>
+        <br>
+        <br>
+        <br>
+        <button style="width:200px;height:50px;background-color: #01b3a7;color: white;font-size: 20px;">Book a Tour Now</button>
+      </div>
+    </div>
+
+    <!-- 顧客評價 -->
+    <div class="container-3" style="background:#f7f7f7">
+      <h1 style="margin-top:50px">What People Say</h1>
+    </div>
+    <div class="container-3" style="background:#f7f7f7;height: 360px;">
+      <div class="say">
+        <div class="sscir">
+        </div>
+        <div class="ss" style="margin-top:80px; margin-left: 10px;width: 380px;">
+          Just wanted to say many, many thanks for helping me set up an amazing Costa Rican adventure! My nephew and I had a great time! All of the accommodations were perfect, thank you!
+          <br>
+          <br>
+          <span style="font-size: 25px ;">Rupert Wood</span>
+        </div>
+        </div>
+        <div class="say">
+          <div class="sscir-2">
+          </div>
+          <div class="ss" style="margin-top:80px; margin-left: 10px;width: 380px;">
+            Just wanted to say many, many thanks for helping me set up an amazing Costa Rican adventure! My nephew and I had a great time! All of the accommodations were perfect, thank you!
+            <br>
+            <br>
+            <span style="font-size: 25px ;">Rupert Wood</span>
+          </div>
+          </div>
+          <div class="say">
+            <div class="sscir-3">
+            </div>
+            <div class="ss" style="margin-top:80px; margin-left: 10px;width: 380px;">
+              Just wanted to say many, many thanks for helping me set up an amazing Costa Rican adventure! My nephew and I had a great time! All of the accommodations were perfect, thank you!
+              <br>
+              <br>
+              <span style="font-size: 25px ;">Rupert Wood</span>
+            </div>
+            </div>
+    </div>
+
+    <!-- 過往統計 -->
+    <div class="container-3">
+      <h1>7 Years of Following The Dream</h1>
+    </div>
+    <div class="container-3">
+      <div class="say-2">
+        <div class="years">
+            <br>
+            <br>
+            <b style="font-size:60px;">12</b>
+            <br>
+            <span style="font-size: 30px;">International <br> Awards</span>
+        </div>
+      </div>
+      <div class="say-2">
+        <div class="years">
+            <br>
+            <br>
+            <b style="font-size:60px;">500+</b>
+            <br>
+            <span style="font-size: 30px;">Happy <br> Travelers</span>
+        </div>
+      </div>
+      <div class="say-2">
+        <div class="years">
+            <br>
+            <br>
+            <b style="font-size:60px;">42</b>
+            <br>
+            <span style="font-size: 30px;">Team <br> Members</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 訂閱區塊 -->
+    <div class="container-4"style="text-align:center;width: 100%;height: 400px;background-size: cover;background-attachment: fixed;background-image: url('https://images.unsplash.com/photo-1510554310709-f60fc3cf34e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80');">
+      <div class="discount" style="margin-top: 90px;width:600px;color: white;">
+        <b style="font-size:50px ;">Sigh Up for 25% Discount</b>
+        <br>
+        <br>
+        <span style="font-size: 18px;">Want to get an instant discount for your next tour? Leave your email and sign up for our newsletter with 25% off all our offers.</span>
+        <br>
+        <br>
+        <br>
+        <input type="text" placeholder="Enter Your E-mail" style="width:300px;height:50px;font-size: 20px;background: white;opacity: .5;border: none;">
+        <button style="border:none;width:200px;height:57px;font-size: 20px;color: white;margin-left: 5px;">Subscribe</button>
+      </div>
+    </div>
+
+    <!-- LASTEST BLOG POSTS -->
+    <div class="container-3" style="margin-top: -30px ;">
+      <h1>Latest Blog Posts</h1>
+    </div>
+
+    <!-- 輪播圖二 -->
+    <div class="container-3">
+    <div class="swiper swipertwo">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="https://ld-wt73.template-help.com/wt_prod-20476/images/blog-post-1-568x492.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="https://ld-wt73.template-help.com/wt_prod-20476/images/blog-post-2-568x492.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="https://ld-wt73.template-help.com/wt_prod-20476/images/blog-post-3-568x492.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="https://ld-wt73.template-help.com/wt_prod-20476/images/blog-post-4-568x492.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="https://ld-wt73.template-help.com/wt_prod-20476/images/blog-post-5-568x492.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="https://ld-wt73.template-help.com/wt_prod-20476/images/blog-post-1-568x492.jpg" alt=""></div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+
+  <!-- GALLERY  -->
+  <div class="container-3">
+    <h1>Gallery</h1>
+  </div>
+  <!-- 輪播圖三 -->
+  <div class="container-3">
+    <div class="swiper swiperthree">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="https://ld-wt73.template-help.com/wt_prod-20476/images/gallery-image-5-270x195.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="https://ld-wt73.template-help.com/wt_prod-20476/images/gallery-image-6-270x195.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="https://ld-wt73.template-help.com/wt_prod-20476/images/gallery-image-7-270x195.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="https://ld-wt73.template-help.com/wt_prod-20476/images/gallery-image-1-270x195.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="https://ld-wt73.template-help.com/wt_prod-20476/images/gallery-image-2-270x195.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="https://ld-wt73.template-help.com/wt_prod-20476/images/gallery-image-3-270x195.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="https://ld-wt73.template-help.com/wt_prod-20476/images/gallery-image-4-270x195.jpg" alt=""></div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <!-- <div class="swiper-pagination"></div> -->
+    </div>  
+  </div>
+  <!-- 下方區域 -->
+  <div class="container-3" style="margin-top: 50px;">
+    <div class="downbar">
+      <div class="intro">
+        <b>CONTACT US</b>
+        <br>
+        <i class="fa-solid fa-phone"></i>&nbsp;&nbsp;&nbsp;&nbsp;+1 323-913-4688
+        <br>        
+        <i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;&nbsp;&nbsp;info@demolink.org
+        <br>
+        <i class="fa-solid fa-location-arrow"></i>&nbsp;&nbsp;&nbsp;&nbsp;4730 Crystal Springs Dr, Los Angeles, CA 90027
+      </div>
+      <div class="intro">
+        <b>POPULAR NEWS</b>
+        <br>
+        Your Personal Guide to 5 Best Places to Visit on Earth
+        <br>
+        May 04, 2020
+        <br>
+        Top 10 Hotels: Rating by Wonder Tour Travel Experts
+        <br>
+        May 04, 202
+
+      </div>
+      <div class="intro">
+        <b>QUICK LINKS</b>
+        <ul style="padding:0 20px ;line-height: 25px;margin: 0;">
+          <li>About Us</li>
+          <li>Our Tours</li>
+          <li>Our Team</li>
+          <li>Gallery</li>
+          <li>Blog</li>
+        </ul>
+        <button>Get in Touch</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-3">
+    <div class="footer">
+      <div class="footertext">© 2022 Wonder Tour. All rights reserved.</div>
+      <div class="footertext">
+        <i class="fa-brands fa-facebook-f"></i>
+        &nbsp;&nbsp;
+        <i class="fa-brands fa-twitter"></i>
+        &nbsp;&nbsp;
+        <i class="fa-brands fa-google-plus-g"></i>
+        &nbsp;&nbsp;
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+      <div class="footertext">Privacy Policy</div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        direction: "vertical",
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+
+      var swiper2 = new Swiper(".swipertwo", {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        slidesPerGroup: 2,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination2",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      var swiper = new Swiper(".swiperthree", {
+        slidesPerView: 6,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+
+</body>
+</html>
